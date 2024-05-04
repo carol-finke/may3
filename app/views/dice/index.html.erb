@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dice Roll</title>
+    <style>
+        .fancy-button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+        }
+        img.die-image {
+            width: 100px; /* adjust size as necessary */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dice!</h1>
+    <p>are freaking awesome</p>
+
+    <% 
+    die1 = rand(1..6);
+    die2 = rand(1..6);
+    total = die1 + die2;
+    %>
+
+    <p>Die 1: <%= die1 %> and Die 2: <%= die2 %></p>
+
+    <p>The total is <%= total %></p>
+
+    <a href="/dice" class="fancy-button">Roll Again</a>
+
+    <p>
+        <img src="/images/dice<%= die1 %>.svg" alt="Dice image for die 1" class="die-image">
+        <img src="/images/dice<%= die2 %>.svg" alt="Dice image for die 2" class="die-image">
+    </p>
+
+</body>
+</html>
